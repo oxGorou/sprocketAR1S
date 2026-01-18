@@ -1,0 +1,76 @@
+# Theme Name: sprocket
+# By: Cam Mendoza <mendoza.cam@gmail.com> 
+# Platform: iPod Mini (138x110, 4 colour grayscale)
+# License: CC-BY-SA 3.0
+# Version: 1.0
+# Last updated: 2013-03-30
+# For a README and more information, please see the project page on GitHub:
+# <https://github.com/gogi-goji/sprocket-rockbox-theme> 
+#
+# sprocketAR1S improvements from SprocketModern (author: OlsroFR) by oxGorou
+
+%we
+%?Lt<|>
+
+%Fl(2,10-Nimbus.fnt)
+%Fl(3,14-Rockbox-Mix.fnt)
+%xl(a,vol-bar-strip.bmp,0,0,7)
+%xl(b,hold.bmp,0,0)
+%xl(c,play-status.bmp,0,0,7)
+%xl(d,hdd-activity-wide.bmp,0,0)
+%xl(e,batt-strip.bmp,0,0,17)
+%xl(f,batt-charge-strip.bmp,0,0,8)
+%xl(g,separator.bmp,0,0)
+%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%?mh<%?lh<%Vd(hddwps)|>%Vd(BPT)|%?lh<%Vd(hdd)|%Vd(BPT)>>%Vd(VI)%Vd(VT)|%?mh<%?lh<%Vd(hddwps)|>%Vd(BPT)|%?lh<%Vd(hdd)|%Vd(BPT)>>>
+%?mh<%Vd(TBMS)|%Vd(TBMM)>
+
+%?mh<%Vd(hold)>
+%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
+
+%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
+%Vl(VT,13,1,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
+
+%Vl(TBMS,0,2,72,11,2)%Vf(0)%Vb(3)
+%al%s%?cs<iPod|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+%Vl(TBMM,0,2,110,11,2)%Vf(0)%Vb(3)
+%al%s%?cs<iPod|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
+
+%Vl(hold,75,2,8,10,-)%Vf(0)%Vb(3)
+%xd(b)
+
+%Vl(PMS,75,2,10,10,-)%Vf(0)%Vb(3)
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+
+%Vl(hddwps,94,4,9,7,-)%Vf(0)%Vb(3)
+%xd(d)
+%Vl(hdd,120,4,9,7,-)%Vf(0)%Vb(3)
+%xd(d)
+
+%Vl(BPT,111,2,24,10,2)%Vf(0)%Vb(3)
+%ar%?if(%bl, =, 100)< F |%bl%%>
+%Vl(charging,135,2,25,10,-)%Vf(0)%Vb(3)
+%t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
+
+%Vl(charged,135,2,25,10,-)%Vf(0)%Vb(3)
+%xd(fh)
+
+%Vl(discharging,135,2,25,10,-)%Vf(0)%Vb(3)
+%?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
+
+%V(0,14,160,1,-)%Vf(0)%Vb(3)
+%xd(g)
+%V(0,109,160,1,-)%Vf(0)%Vb(3)
+%xd(g)
+%Vl(NPT,14,112,146,14,3)%Vf(0)%Vb(3)
+%al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%ss(0,4, %iy)%)|>
+
+%Vl(NPI,1,114,12,12,-)%Vf(0)%Vb(3)
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+
+%Vl(CLOCK,0,114,160,12,2)%Vf(0)%Vb(3)
+%?bs<%ac%s%bs|%ac%s%cH:%cM>
+
+%Vi(-,0,20,160,89,-)%Vf(0)%Vb(3)
+%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>

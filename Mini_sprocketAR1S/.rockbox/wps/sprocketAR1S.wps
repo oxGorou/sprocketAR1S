@@ -1,0 +1,133 @@
+# Theme Name: sprocket
+# By: Cam Mendoza <mendoza.cam@gmail.com> 
+# Platform: iPod Mini (138x110, 4 colour grayscale)
+# License: CC-BY-SA 3.0
+# Version: 1.0
+# Last updated: 2013-03-30
+# For a README and more information, please see the project page on GitHub:
+# <https://github.com/gogi-goji/sprocket-rockbox-theme> 
+#
+# sprocketAR1S improvements from SprocketModern (author: OlsroFR) by oxGorou
+
+%wd
+%Fl(2,10-Nimbus.fnt)
+%Fl(3,14-Rockbox-Mix.fnt)
+%xl(A,repeat-strip.bmp,6,2,4)
+%xl(B,shuffle.bmp,6,2)
+%xl(C,crossfade.bmp,0,0)
+%xl(D,prog-bar-full.bmp,0,0)
+%xl(E,prog-bar-empty.bmp,0,0)
+%xl(T,timer.bmp,0,0)
+%xl(a,vol-bar-strip.bmp,0,0,7)
+%xl(b,hold.bmp,0,0)
+%xl(c,play-status.bmp,0,0,7)
+%xl(d,hdd-activity-wide.bmp,0,0)
+%xl(e,batt-strip.bmp,0,0,17)
+%xl(f,batt-charge-strip.bmp,0,0,8)
+%xl(g,separator.bmp,0,0)
+
+%Vl(PosMin,2,17,68,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosTiny,2,17,81,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosSmall,2,17,88,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosMedSmall,2,17,94,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosMed,2,17,100,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosLarge,2,17,113,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(PosMax,2,17,134,14,2)
+%al%s%pp %Sx(of) %pe
+
+%Vl(rrepeat,119,17,17,9,-)%Vf(0)%Vb(3)
+%?mm<|%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)>
+%Vl(rshuffle,119,17,17,9,-)%Vf(0)%Vb(3)
+%xd(B)
+%Vl(rcf,119,17,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+%Vl(mshuffle,106,17,17,9,-)%Vf(0)%Vb(3)
+%xd(B)
+%Vl(mcf,106,17,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+%Vl(lcf,93,17,17,9,-)%Vf(0)%Vb(3)
+%xd(C)
+%Vl(tmr_rcf_left,99,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+%Vl(tmr_mcf_left,86,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+%Vl(tmr_lcf_left,73,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+%Vl(timerCF_l,92,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+%Vl(timerCF_m,105,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+%Vl(timerCF_r,118,17,18,9,-)%Vf(0)%Vb(3)
+%xd(T)
+
+%Vl(CA,2,29,55,55,3)
+%Cl(0,0,55,55,l,t)
+%Cd
+
+%Vl(TICA,60,28,78,56,3)%Vf(0)%Vb(3)
+%ac%s%?it<%it|%fn>
+%ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
+%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
+%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
+
+%Vl(TI,0,29,138,56,3)%Vf(0)%Vb(3)
+%ac%s%?it<%it|%fn>
+%ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
+%ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
+%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
+
+%?mh<%Vd(hold)>
+%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
+%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
+%Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
+%Vl(hold,51,2,8,10,-)%Vf(0)%Vb(3)
+%xd(b)
+%Vl(PMS,64,3,10,10,-)%Vf(0)%Vb(3)
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+%?lh<%Vd(hddwps)|>
+%Vl(hddwps,79,4,9,7,-)%Vf(0)%Vb(3)
+%xd(d)
+%Vl(BPT,89,2,24,10,2)%Vf(0)%Vb(3)
+%ar%?if(%bl, =, 100)< F |%bl%%>
+%Vl(charging,113,2,25,10,-)%Vf(0)%Vb(3)
+%t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
+%Vl(charged,113,2,25,10,-)%Vf(0)%Vb(3)
+%xd(fh)
+%Vl(discharging,113,2,25,10,-)%Vf(0)%Vb(3)
+%?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
+
+%V(0,14,138,1,-)%Vf(0)%Vb(3)
+%xd(g)
+
+%?bs<%?xf<%?mm<%Vd(PosMed)|%?ps<%Vd(PosSmall)|%Vd(PosMed)>>|%?mm<%?ps<%Vd(PosTiny)|%Vd(PosMedSmall)>|%?ps<%Vd(PosMin)|%Vd(PosTiny)>>>|%?mm<%?ps<%?xf<%Vd(PosLarge)|%Vd(PosMed)>|%?xf<%Vd(PosMax)|%Vd(PosLarge)>>|%?ps<%?xf<%Vd(PosMed)|%Vd(PosSmall)>|%?xf<%Vd(PosLarge)|%Vd(PosMed)>>>>
+
+%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
+%?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
+
+%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
+
+%V(3,87,134,8,-)%Vf(0)%Vb(3)
+%pb(0,0,132,8,image,D,backdrop,E)
+
+%V(3,98,45,12,2)%Vf(0)%Vb(3)
+%al%s%pc
+%V(90,98,45,12,2)%Vf(0)%Vb(3)
+%ar%s-%pr
+%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+
+%V(48,98,42,12,2)%Vf(0)%Vb(3)
+%?bs<%ac%s%bs|%ac%s%cH:%cM>
