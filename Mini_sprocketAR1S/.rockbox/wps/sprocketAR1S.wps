@@ -88,14 +88,14 @@
 %ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
 
-%?mh<%Vd(hold)>
+%Vd(hold)
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
-%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
 %Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
 %al%pv dB
 %Vl(hold,51,2,8,10,-)%Vf(0)%Vb(3)
-%xd(b)
+%?mh<%xd(b)>
 %Vl(PMS,64,3,10,10,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 %?lh<%Vd(hddwps)|>
