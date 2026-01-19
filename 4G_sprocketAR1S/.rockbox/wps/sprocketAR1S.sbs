@@ -25,7 +25,7 @@
 
 %?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
 %?mh<%Vd(hold)>
-%?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>|||>>>>
+%?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>||||>>>>
 %?mh<%Vd(TBMS)|%Vd(TBMM)>
 %?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)|%?bs<%Vd(CLOCK)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
 
