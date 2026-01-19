@@ -2,7 +2,9 @@
 
 # Introduction
 sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/Olsro/)’s [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) theme, featuring a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. Powered by the Rockbox-Mix font for full multi-language support
-- sprocketAR1S comes in two device versions: iPod Mini (138x110) and iPod 4G (Monochrome) (160x128).
+- sprocketAR1S comes in two device versions:
+  - [iPod Mini](https://themes.rockbox.org/index.php?themeid=3954)
+  - [iPod 4G (Monochrome)](https://themes.rockbox.org/index.php?themeid=3955)
 
 # Changelog
 
