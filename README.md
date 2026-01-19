@@ -1,9 +1,8 @@
 # sprocketAR1S
-sprocketAR1S is a heavily modified evolution of Paul Sauro’s SprocketModern theme, featuring a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. Powered by the Rockbox-Mix font for full multi-language support
 
 # Introduction
-- This is a modified version of [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) by [OlsroFR](https://github.com/Olsro/).
-- sprocketAR1S comes in two device versions: iPod Mini (138x110) and iPod 4G (160x128).
+sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/Olsro/)’s [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) theme, featuring a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. Powered by the Rockbox-Mix font for full multi-language support
+- sprocketAR1S comes in two device versions: iPod Mini (138x110) and iPod 4G (Monochrome) (160x128).
 
 # Changelog
 
@@ -72,7 +71,7 @@ sprocketAR1S is a heavily modified evolution of Paul Sauro’s SprocketModern th
 ![Alt text](Img/MiniLockCA.png?raw=true "MiniLockCA")
 ![Alt text](Img/MiniLock.png?raw=true "MiniLock")
 
-## iPod (Monochrome)
+## iPod 4G (Monochrome)
 ![Alt text](Img/4GWPSCA.png?raw=true "4GWPSCA")
 ![Alt text](Img/4GWPS.png?raw=true "4GWPS")
 ![Alt text](Img/4GMenu.png?raw=true "4GMenu")
