@@ -9,14 +9,13 @@
 #
 # sprocketAR1S improvements from SprocketModern (author: OlsroFR) by oxGorou
 
-%we
+%wd
 %?Lt<|>
 
 %Fl(2,10-Nimbus.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
 %Fl(4,35-Nimbus.fnt)
 %Fl(5,19-Nimbus.fnt)
-%xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
 %xl(c,play-status.bmp,0,0,7)
 %xl(d,hdd-activity-wide.bmp,0,0)
@@ -24,16 +23,13 @@
 %xl(f,batt-charge-strip.bmp,0,0,8)
 %xl(g,separator.bmp,0,0)
 
-%?or(%if(%cs, =, 2),%if(%cs, =, 10))<%?mh<%?lh<%Vd(hddwps)|>%Vd(BPT)|%?lh<%Vd(hdd)|%Vd(BPT)>>%Vd(VI)%Vd(VT)|%?mh<%?lh<%Vd(hddwps)|>%Vd(BPT)|%?lh<%Vd(hdd)|%Vd(BPT)>>>
-%?if(%cs, =, 1)<%?mh<%Vd(hold)%Vd(TBMS)|%Vd(TBMM)>|%?mh<%Vd(hold)%Vd(TBMS)%Vd(BPT)|%Vd(TBMM)%Vd(BPT)>>
-%?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr);%Vd(hold)%Vd(TBMS)%?C<%Vd(LKA)|%Vd(LKN)>|%Vd(rr);%Vd(hold)%Vd(TBMS)%?C<%Vd(LKA)|%Vd(LKN)>|||>>>>
+%?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
+%?mh<%Vd(hold)>
+%?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>|||>>>>
+%?mh<%Vd(TBMS)|%Vd(TBMM)>
+%?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)|%?bs<%Vd(CLOCK)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
 
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
-
-%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
-%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
-%Vl(VT,13,1,38,10,2)%Vf(0)%Vb(3)
-%al%pv dB
 
 %Vl(TBMS,0,2,72,11,2)%Vf(0)%Vb(3)
 %al%s%?cs<iPod|Now Playing|Recording|FM Radio|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|%Lt|Set Option|%Lt|%Lt|%?if(%Lt, =,Context Menu)<Perform Action...|%Lt>|%Lt|%Lt|%Lt|%Lt|%Lt|USB Connected>
@@ -42,9 +38,6 @@
 
 %Vl(hold,75,2,8,10,-)%Vf(0)%Vb(3)
 %xd(b)
-
-%Vl(PMS,75,2,10,10,-)%Vf(0)%Vb(3)
-%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 
 %Vl(hddwps,94,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
@@ -67,7 +60,7 @@
 %V(0,109,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
 
-%Vl(rr,0,0,-,-,2)
+%Vl(rr,0,20,160,89,2)
 
 %Vl(NPT,14,112,146,14,3)%Vf(0)%Vb(3)
 %al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%ss(0,4, %iy)%)|>
@@ -79,7 +72,7 @@
 %?bs<%ac%s%bs|%ac%s%cH:%cM>
 
 %Vi(-,0,20,160,89,-)%Vf(0)%Vb(3)
-%?if(%cs, =, 1)<%?mh<%?C<%Vd(LKA)|%Vd(LKN)>%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)|%?bs<%Vd(CLOCK)>>|%Vd(STU)%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
+%?if(%cs, =, 1)<%?mh<%?C<%Vd(LKA)|%Vd(LKN)>|%Vd(STU)>>
 
 %Vl(LKA,2,17,90,90,-)%Vf(0)%Vb(3)
 %Cl(0,0,90,90,c,c)
@@ -87,14 +80,14 @@
 %Vl(LKA,94,40,66,20,5)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
 %Vl(LKA,94,60,66,20,2)%Vf(0)%Vb(3)
-%ac%s%ca
+%ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 %ac%s%cb %ce, %cy
 
 %Vl(LKN,0,30,160,35,4)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
 %Vl(LKN,0,70,160,20,2)%Vf(0)%Vb(3)
-%ac%s%ca
-%ac%s%cb %ce, %cY
+%ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
+%ac%s%?cm<January|February|March|April|May|June|July|August|September|October|November|December> %ce, %cY
 
 %Vl(STU,0,20,160,89,2)%Vf(0)%Vb(3)
 %ac

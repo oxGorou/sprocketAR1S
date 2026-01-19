@@ -72,6 +72,27 @@
 %Vl(timerCF_r,118,17,18,9,-)%Vf(0)%Vb(3)
 %xd(T)
 
+%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
+%Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
+
+%Vl(hold,51,2,8,10,-)%Vf(0)%Vb(3)
+%xd(b)
+%Vl(PMS,64,3,10,10,-)%Vf(0)%Vb(3)
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+%Vl(hddwps,79,4,9,7,-)%Vf(0)%Vb(3)
+%xd(d)
+%Vl(BPT,89,2,24,10,2)%Vf(0)%Vb(3)
+%ar%?if(%bl, =, 100)< F |%bl%%>
+
+%Vl(charging,113,2,25,10,-)%Vf(0)%Vb(3)
+%t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
+%Vl(charged,113,2,25,10,-)%Vf(0)%Vb(3)
+%xd(fh)
+%Vl(discharging,113,2,25,10,-)%Vf(0)%Vb(3)
+%?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
+
 %Vl(CA,2,29,55,55,3)
 %Cl(0,0,55,55,l,t)
 %Cd
@@ -88,28 +109,6 @@
 %ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
 
-%Vd(hold)
-%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
-%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
-%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
-%Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
-%al%pv dB
-%Vl(hold,51,2,8,10,-)%Vf(0)%Vb(3)
-%?mh<%xd(b)>
-%Vl(PMS,64,3,10,10,-)%Vf(0)%Vb(3)
-%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
-%?lh<%Vd(hddwps)|>
-%Vl(hddwps,79,4,9,7,-)%Vf(0)%Vb(3)
-%xd(d)
-%Vl(BPT,89,2,24,10,2)%Vf(0)%Vb(3)
-%ar%?if(%bl, =, 100)< F |%bl%%>
-%Vl(charging,113,2,25,10,-)%Vf(0)%Vb(3)
-%t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
-%Vl(charged,113,2,25,10,-)%Vf(0)%Vb(3)
-%xd(fh)
-%Vl(discharging,113,2,25,10,-)%Vf(0)%Vb(3)
-%?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
-
 %V(0,14,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
 
@@ -120,14 +119,16 @@
 
 %?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
 
-%V(3,87,134,8,-)%Vf(0)%Vb(3)
+%V(3,87,132,8,-)%Vf(0)%Vb(3)
 %pb(0,0,132,8,image,D,backdrop,E)
 
 %V(3,98,45,12,2)%Vf(0)%Vb(3)
 %al%s%pc
 %V(90,98,45,12,2)%Vf(0)%Vb(3)
 %ar%s-%pr
-%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+%?mh<%Vd(hold)>%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+%?lh<%Vd(hddwps)|>
+%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 
 %V(48,98,42,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%cH:%cM>
