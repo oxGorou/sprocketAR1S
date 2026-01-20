@@ -26,8 +26,9 @@
 %?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
 %?mh<%Vd(hold)>
 %?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>||||>>>>
+%?if(%cs, =, 1)<%?and(%if(%mh, =, 1), %if(%lh, =, 1))<%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>>>
 %?mh<%Vd(TBMS)|%Vd(TBMM)>
-%?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)|%?bs<%Vd(CLOCK)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
+%?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
 
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 
@@ -82,12 +83,16 @@
 %Vl(LKA,72,50,66,20,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 %ac%s%cb %ce, %cy
+%Vl(LKA,72,75,66,12,2)%Vf(0)%Vb(3)
+%?bs<%ac%s%bs>
 
-%Vl(LKN,0,20,138,35,4)%Vf(0)%Vb(3)
+%Vl(LKN,0,15,138,35,4)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
-%Vl(LKN,0,60,138,30,2)%Vf(0)%Vb(3)
+%Vl(LKN,0,50,138,30,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 %ac%s%?cm<January|February|March|April|May|June|July|August|September|October|November|December> %ce, %cY
+%Vl(LKN,0,75,138,12,2)%Vf(0)%Vb(3)
+%?bs<%ac%s%bs>
 
 %Vl(STU,0,18,138,73,2)%Vf(0)%Vb(3)
 %ac
