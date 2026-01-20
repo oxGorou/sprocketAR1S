@@ -78,12 +78,12 @@
 %Vl(LKA,2,17,90,90,-)%Vf(0)%Vb(3)
 %Cl(0,0,90,90,c,c)
 %Cd
-%Vl(LKA,94,35,66,20,5)%Vf(0)%Vb(3)
+%Vl(LKA,94,40,66,20,5)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
-%Vl(LKA,94,55,66,20,2)%Vf(0)%Vb(3)
+%Vl(LKA,94,60,66,20,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 %ac%s%cb %ce, %cy
-%Vl(LKA,94,80,66,12,2)%Vf(0)%Vb(3)
+%Vl(LKA,94,85,66,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs>
 
 %Vl(LKN,0,25,160,35,4)%Vf(0)%Vb(3)
