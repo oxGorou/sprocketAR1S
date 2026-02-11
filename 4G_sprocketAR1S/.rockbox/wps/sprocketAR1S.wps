@@ -1,6 +1,6 @@
 # Theme Name: sprocket
 # By: Cam Mendoza <mendoza.cam@gmail.com> 
-# Platform: iPod Mini (138x110, 4 colour grayscale)
+# Platform: iPod 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
 # Version: 1.0
 # Last updated: 2013-03-30
@@ -26,50 +26,32 @@
 %xl(f,batt-charge-strip.bmp,0,0,8)
 %xl(g,separator.bmp,0,0)
 
-%Vl(PosMin,2,18,90,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosTiny,2,18,103,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosSmall,2,18,110,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMedSmall,2,18,116,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMed,2,18,122,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosLarge,2,18,135,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMax,2,18,156,14,2)
+%V(2,18,110,14,2)
 %al%s%pp %Sx(of) %pe
 
 %Vl(rrepeat,141,18,17,9,-)%Vf(0)%Vb(3)
 %?mm<|%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)>
 %Vl(rshuffle,141,18,17,9,-)%Vf(0)%Vb(3)
 %xd(B)
-%Vl(rcf,141,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(rcf,151,18,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
 %Vl(mshuffle,128,18,17,9,-)%Vf(0)%Vb(3)
 %xd(B)
-%Vl(mcf,128,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(mcf,138,18,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
-%Vl(lcf,115,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(lcf,125,18,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
-%Vl(tmr_rcf_left,121,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_rcf_left,143,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(tmr_mcf_left,108,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_mcf_left,130,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(tmr_lcf_left,95,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_lcf_left,117,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_l,114,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_l,126,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_m,127,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_m,139,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_r,140,18,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_r,152,18,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
 
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
@@ -81,7 +63,7 @@
 %xd(b)
 %Vl(PMS,75,3,10,10,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
-%Vl(hddwps,94,4,9,7,-)%Vf(0)%Vb(3)
+%Vl(hddwps,95,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
 %Vl(BPT,111,2,24,10,2)%Vf(0)%Vb(3)
 %ar%?if(%bl, =, 100)< F |%bl%%>
@@ -97,14 +79,14 @@
 %Cl(0,0,70,70,l,t)
 %Cd
 
-%Vl(TICA,75,31,83,72,3)%Vf(0)%Vb(3)
+%Vl(TICA,75,30,83,72,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
 %ac%s%?ia<%ia|%?d(2)<%(%d(2)%)|%(Unknown Artist%)>>
 %ac%s%?id<%id|%?d(1)<%(%d(1)%)|%(Unknown Album%)>>
 %ac%s%?iy<%(%iy%)|>
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
 
-%Vl(TI,0,31,160,72,3)%Vf(0)%Vb(3)
+%Vl(TI,0,32,160,72,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
 %ac%s%?ia<%ia|%?d(2)<%(%d(2)%)|%(Unknown Artist%)>>
 %ac%s%?id<%id|%?d(1)<%(%d(1)%)|%(Unknown Album%)>>
@@ -113,8 +95,6 @@
 
 %V(0,14,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
-
-%?bs<%?xf<%?mm<%Vd(PosMed)|%?ps<%Vd(PosSmall)|%Vd(PosMed)>>|%?mm<%?ps<%Vd(PosTiny)|%Vd(PosMedSmall)>|%?ps<%Vd(PosMin)|%Vd(PosTiny)>>>|%?mm<%?ps<%?xf<%Vd(PosLarge)|%Vd(PosMed)>|%?xf<%Vd(PosMax)|%Vd(PosLarge)>>|%?ps<%?xf<%Vd(PosMed)|%Vd(PosSmall)>|%?xf<%Vd(PosLarge)|%Vd(PosMed)>>>>
 
 %?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
 %?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>

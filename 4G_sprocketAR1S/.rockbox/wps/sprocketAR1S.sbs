@@ -1,6 +1,6 @@
 # Theme Name: sprocket
 # By: Cam Mendoza <mendoza.cam@gmail.com> 
-# Platform: iPod Mini (138x110, 4 colour grayscale)
+# Platform: iPod 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
 # Version: 1.0
 # Last updated: 2013-03-30
@@ -22,6 +22,7 @@
 %xl(e,batt-strip.bmp,0,0,17)
 %xl(f,batt-charge-strip.bmp,0,0,8)
 %xl(g,separator.bmp,0,0)
+%xl(h,prohibited.bmp,0,0)
 
 %?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
 %?mh<%Vd(hold)>
@@ -72,18 +73,22 @@
 %Vl(CLOCK,0,114,160,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%cH:%cM>
 
-%Vi(-,0,20,160,89,-)%Vf(0)%Vb(3)
+%Vi(x,0,20,160,89,-)%Vf(0)%Vb(3)
+%Vi(u,0,0,1,1,-)
+
+%?if(%cs, !=, 21)<%VI(x)>
+%?if(%cs, =, 21)<%VI(u)%Vd(USB)>
 %?if(%cs, =, 1)<%?mh<%?C<%Vd(LKA)|%Vd(LKN)>|%Vd(STU)>>
 
-%Vl(LKA,2,17,90,90,-)%Vf(0)%Vb(3)
-%Cl(0,0,90,90,c,c)
+%Vl(LKA,2,18,88,88,-)%Vf(0)%Vb(3)
+%Cl(0,0,88,88,c,c)
 %Cd
-%Vl(LKA,94,40,66,20,5)%Vf(0)%Vb(3)
+%Vl(LKA,93,40,66,20,5)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
-%Vl(LKA,94,60,66,20,2)%Vf(0)%Vb(3)
+%Vl(LKA,93,60,66,20,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
 %ac%s%cb %ce, %cy
-%Vl(LKA,94,85,66,12,2)%Vf(0)%Vb(3)
+%Vl(LKA,93,85,66,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs>
 
 %Vl(LKN,0,25,160,35,4)%Vf(0)%Vb(3)
@@ -99,3 +104,8 @@
 %ac
 %ac
 %ac%sScroll To Unlock
+
+%Vl(USB,55,25,50,50,-)%Vf(0)%Vb(3)
+%xd(h)
+%Vl(USB,0,90,160,12,2)%Vf(0)%Vb(3)
+%acDo not disconnect.

@@ -4,8 +4,10 @@
 sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/Olsro/)’s [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) theme, featuring a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. Powered by the Rockbox-Mix font for full multi-language support
 - sprocketAR1S comes in two device versions:
   - [iPod Mini](https://themes.rockbox.org/index.php?themeid=3954)
-  - [iPod 4G (Monochrome)](https://themes.rockbox.org/index.php?themeid=3955)
+  - [iPod Monochrome (Gen 1-4)](https://themes.rockbox.org/index.php?themeid=3955)
 
+# Reddit
+[Introduction Post](https://www.reddit.com/r/ipod/comments/1qzg3gm/introducing_sprocketar1s_theme_for_ipod_mini_ipod/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 # Changelog
 
 ### Font Changes
@@ -15,7 +17,7 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 ### Lock Screen Enhancement
 - Added a new lock screen feature with clock display
 - Two display modes:
-  - **With Album Art**: Shows album art (70x70 on Mini, 90x90 on 4G) with time, day, and date
+  - **With Album Art**: Shows album art (70x70 on Mini, 88x88 on 4G) with time, day, and date
   - **Without Album Art**: Full-screen clock display with centered time, day, and date
 - Shows "Scroll To Unlock" message when device is unlocked
 - Lock screen appears when device is locked in main menu and playback is active 
@@ -47,12 +49,6 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 - Simplified artist/album display using directory fallbacks
 - Removed alternating "Clock:" and "Sleep:" labels for cleaner display
 
-### Technical Improvements
-- Better conditional logic for viewport display management
-- Optimized image loading and viewport declarations
-- Improved status detection for lock screen activation
-- Enhanced volume indicator mapping
-
 ## Device-Specific Dimensions
 
 ### iPod Mini (138x110)
@@ -60,22 +56,22 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 - Progress bar: 132x8
 - Main viewport: 138x73 (with Now Playing section at bottom)
 
-### iPod 4G (160x128)
-- Cover art: 70x70 (compact view), 90x90 (lock screen)
+### iPod Monochrome (Gen 1-4) (160x128)
+- Cover art: 70x70 (compact view), 88x88 (lock screen)
 - Progress bar: 154x8
 - Main viewport: 160x89 (with Now Playing section at bottom)
   
 # Preview
 ## iPod Mini
-![Alt text](Img/MiniWPSCA.png?raw=true "MiniWPSCA")
-![Alt text](Img/MiniWPS.png?raw=true "MiniWPS")
-![Alt text](Img/MiniMenu.png?raw=true "MiniMenu")
-![Alt text](Img/MiniLockCA.png?raw=true "MiniLockCA")
-![Alt text](Img/MiniLock.png?raw=true "MiniLock")
+![Alt text](Preview/Mini_WPSCA.png?raw=true "MiniWPSCA")
+![Alt text](Preview/Mini_WPS.png?raw=true "MiniWPS")
+![Alt text](Preview/Mini_MainMenu.png?raw=true "MiniMenu")
+![Alt text](Preview/Mini_LockCA.png?raw=true "MiniLockCA")
+![Alt text](Preview/Mini_Lock.png?raw=true "MiniLock")
 
-## iPod 4G (Monochrome)
-![Alt text](Img/4GWPSCA.png?raw=true "4GWPSCA")
-![Alt text](Img/4GWPS.png?raw=true "4GWPS")
-![Alt text](Img/4GMenu.png?raw=true "4GMenu")
-![Alt text](Img/4GLockCA.png?raw=true "4GLockCA")
-![Alt text](Img/4GLock.png?raw=true "4GLock")
+## iPod Monochrome (Gen 1-4)
+![Alt text](Preview/4G_WPSCA.png?raw=true "4GWPSCA")
+![Alt text](Preview/4G_WPS.png?raw=true "4GWPS")
+![Alt text](Preview/4G_MainMenu.png?raw=true "4GMenu")
+![Alt text](Preview/4G_LockCA.png?raw=true "4GLockCA")
+![Alt text](Preview/4G_Lock.png?raw=true "4GLock")

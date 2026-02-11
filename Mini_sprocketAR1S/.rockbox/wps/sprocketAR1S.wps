@@ -26,50 +26,32 @@
 %xl(f,batt-charge-strip.bmp,0,0,8)
 %xl(g,separator.bmp,0,0)
 
-%Vl(PosMin,2,17,68,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosTiny,2,17,81,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosSmall,2,17,88,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMedSmall,2,17,94,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMed,2,17,100,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosLarge,2,17,113,14,2)
-%al%s%pp %Sx(of) %pe
-
-%Vl(PosMax,2,17,134,14,2)
+%V(2,17,90,14,2)
 %al%s%pp %Sx(of) %pe
 
 %Vl(rrepeat,119,17,17,9,-)%Vf(0)%Vb(3)
 %?mm<|%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)>
 %Vl(rshuffle,119,17,17,9,-)%Vf(0)%Vb(3)
 %xd(B)
-%Vl(rcf,119,17,17,9,-)%Vf(0)%Vb(3)
+%Vl(rcf,129,17,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
 %Vl(mshuffle,106,17,17,9,-)%Vf(0)%Vb(3)
 %xd(B)
-%Vl(mcf,106,17,17,9,-)%Vf(0)%Vb(3)
+%Vl(mcf,116,17,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
-%Vl(lcf,93,17,17,9,-)%Vf(0)%Vb(3)
+%Vl(lcf,103,17,7,9,-)%Vf(0)%Vb(3)
 %xd(C)
-%Vl(tmr_rcf_left,99,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_rcf_left,121,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(tmr_mcf_left,86,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_mcf_left,108,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(tmr_lcf_left,73,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_lcf_left,95,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_l,92,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_l,104,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_m,105,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_m,117,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
-%Vl(timerCF_r,118,17,18,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_r,130,17,6,9,-)%Vf(0)%Vb(3)
 %xd(T)
 
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
@@ -103,7 +85,7 @@
 %ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
 %ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
 
-%Vl(TI,0,29,138,56,3)%Vf(0)%Vb(3)
+%Vl(TI,0,28,138,56,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
 %ac%s%?ia<%ia|%?d(2)<%t(7)%(Unknown Artist%);%t(7)%(%d(2)%)|%(Unknown Artist%)>>
 %ac%s%?id<%?iy<%t(7)%id;%t(3.5)%(%iy%)|%id>|%?d(1)<%t(6)%ac%s%(Unknown Album%);%t(6)%ac%s%(%d(1)%)|%(Unknown Album%)>>
@@ -111,8 +93,6 @@
 
 %V(0,14,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
-
-%?bs<%?xf<%?mm<%Vd(PosMed)|%?ps<%Vd(PosSmall)|%Vd(PosMed)>>|%?mm<%?ps<%Vd(PosTiny)|%Vd(PosMedSmall)>|%?ps<%Vd(PosMin)|%Vd(PosTiny)>>>|%?mm<%?ps<%?xf<%Vd(PosLarge)|%Vd(PosMed)>|%?xf<%Vd(PosMax)|%Vd(PosLarge)>>|%?ps<%?xf<%Vd(PosMed)|%Vd(PosSmall)>|%?xf<%Vd(PosLarge)|%Vd(PosMed)>>>>
 
 %?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
 %?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
