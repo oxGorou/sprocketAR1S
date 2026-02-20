@@ -79,19 +79,19 @@
 %Cl(0,0,70,70,l,t)
 %Cd
 
-%Vl(TICA,75,30,83,72,3)%Vf(0)%Vb(3)
+%Vl(TICA,75,31,83,72,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
-%ac%s%?ia<%ia|%?d(2)<%(%d(2)%)|%(Unknown Artist%)>>
-%ac%s%?id<%id|%?d(1)<%(%d(1)%)|%(Unknown Album%)>>
-%ac%s%?iy<%(%iy%)|>
-%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
+%ac%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
+%ac%s%?id<%id|%?d(1)<%t(8)Unknown Album;%t(8)%d(1)|Unknown Album>>
+%ac%s%?iy<%iy|Unknown Year>
+%ac%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
 
-%Vl(TI,0,32,160,72,3)%Vf(0)%Vb(3)
+%Vl(TI,0,31,160,72,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
-%ac%s%?ia<%ia|%?d(2)<%(%d(2)%)|%(Unknown Artist%)>>
-%ac%s%?id<%id|%?d(1)<%(%d(1)%)|%(Unknown Album%)>>
-%ac%s%?iy<%(%iy%)|>
-%ac%s%?Fn<%?It<%t(6.5)Next: %It;%t(1.5)Next: by;%t(6)Next: %?Ia<%Ia|%(Unknown Artist%)>|Next: %Fn>|End of Playlist>
+%ac%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
+%ac%s%?id<%id|%?d(1)<%t(8)Unknown Album;%t(8)%d(1)|Unknown Album>>
+%ac%s%?iy<%iy|Unknown Year>
+%ac%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
 
 %V(0,14,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
