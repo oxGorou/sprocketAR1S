@@ -14,8 +14,8 @@
 
 %Fl(2,10-Nimbus.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
-%Fl(4,35-Nimbus.fnt)
-%Fl(5,19-Nimbus.fnt)
+%Fl(4,19-Nimbus.fnt)
+%xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
 %xl(c,play-status.bmp,0,0,7)
 %xl(d,hdd-activity-wide.bmp,0,0)
@@ -26,6 +26,7 @@
 
 %?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
 %?mh<%Vd(hold)>
+%?if(%cs, =, 10)<%Vd(VI)%Vd(VT)>
 %?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>||||>>>>
 %?if(%cs, =, 1)<%?and(%if(%mh, =, 1), %if(%lh, =, 1))<%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>>>
 %?mh<%Vd(TBMS)|%Vd(TBMM)>
@@ -45,6 +46,11 @@
 %xd(d)
 %Vl(hdd,98,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
+
+%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
+%Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
 
 %Vl(BPT,89,2,24,10,2)%Vf(0)%Vb(3)
 %ar%?if(%bl, =, 100)< F |%bl%%>
@@ -83,7 +89,7 @@
 %Vl(LKA,2,18,70,70,-)%Vf(0)%Vb(3)
 %Cl(0,0,70,70,c,c)
 %Cd
-%Vl(LKA,72,30,66,20,5)%Vf(0)%Vb(3)
+%Vl(LKA,72,30,66,20,4)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
 %Vl(LKA,72,50,66,20,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
@@ -91,7 +97,7 @@
 %Vl(LKA,72,75,66,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs>
 
-%Vl(LKN,0,15,138,35,4)%Vf(0)%Vb(3)
+%Vl(LKN,0,30,138,20,4)%Vf(0)%Vb(3)
 %ac%s%cH:%cM
 %Vl(LKN,0,50,138,30,2)%Vf(0)%Vb(3)
 %ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
@@ -113,4 +119,4 @@
 %Vl(ThemeInfo,0,77,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
 %Vl(ThemeInfo,0,79,138,10,2)%Vf(0)%Vb(3)
-%acsprocketAR1S v5.1
+%acsprocketAR1S v5.2

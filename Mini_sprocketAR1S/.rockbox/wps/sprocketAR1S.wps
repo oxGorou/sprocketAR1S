@@ -80,10 +80,10 @@
 %Cd
 
 %Vl(TICA,60,28,78,56,3)%Vf(0)%Vb(3)
-%ac%s%?it<%it|%fn>
-%ac%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
-%ac%s%?id<%?iy<%t(8)%id;%t(4)%iy|%id>|%?d(1)<%?iy<%t(8)Unknown Album;%t(8)%d(1);%t(4)%iy|%t(8)Unknown Album;%t(8)%d(1)>|%?iy<%t(8)Unknown Album;%t(4)%iy|Unknown Album>>>
-%ac%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
+%al%s%?it<%it|%fn>
+%al%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
+%al%s%?id<%?iy<%t(8)%id;%t(4)%iy|%id>|%?d(1)<%?iy<%t(8)Unknown Album;%t(8)%d(1);%t(4)%iy|%t(8)Unknown Album;%t(8)%d(1)>|%?iy<%t(8)Unknown Album;%t(4)%iy|Unknown Album>>>
+%al%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
 
 %Vl(TI,0,28,138,56,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>

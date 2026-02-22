@@ -16,6 +16,7 @@
 %Fl(3,14-Rockbox-Mix.fnt)
 %Fl(4,35-Nimbus.fnt)
 %Fl(5,19-Nimbus.fnt)
+%xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
 %xl(c,play-status.bmp,0,0,7)
 %xl(d,hdd-activity-wide.bmp,0,0)
@@ -26,6 +27,7 @@
 
 %?mh<%?lh<%Vd(hddwps)%Vd(BPT)|%Vd(BPT)>|%?lh<%Vd(hdd)|%Vd(BPT)>>
 %?mh<%Vd(hold)>
+%?if(%cs, =, 10)<%Vd(VI)%Vd(VT)>
 %?if(%cs, =, 1)<%?mh<%?pS(3)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>||||>>>>
 %?if(%cs, =, 1)<%?and(%if(%mh, =, 1), %if(%lh, =, 1))<%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>>>
 %?mh<%Vd(TBMS)|%Vd(TBMM)>
@@ -45,6 +47,11 @@
 %xd(d)
 %Vl(hdd,120,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
+
+%Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
+%Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
+%al%pv dB
 
 %Vl(BPT,111,2,24,10,2)%Vf(0)%Vb(3)
 %ar%?if(%bl, =, 100)< F |%bl%%>
@@ -113,4 +120,4 @@
 %Vl(ThemeInfo,0,95,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
 %Vl(ThemeInfo,0,97,160,10,2)%Vf(0)%Vb(3)
-%acsprocketAR1S v5.1
+%acsprocketAR1S v5.2
