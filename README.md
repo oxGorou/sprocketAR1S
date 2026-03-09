@@ -11,6 +11,9 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 
 # Reddit
 [Introduction Post](https://www.reddit.com/r/ipod/comments/1qzg3gm/introducing_sprocketar1s_theme_for_ipod_mini_ipod/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+# Todo
+- Support for iPod Remote (coming soon)
   
 # Preview
 ## iPod Mini
