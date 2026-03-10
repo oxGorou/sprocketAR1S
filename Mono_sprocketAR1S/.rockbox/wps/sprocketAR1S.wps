@@ -1,23 +1,18 @@
-# Theme Name: sprocket
-# By: Cam Mendoza <mendoza.cam@gmail.com> 
-# Platform: iPod 4G (160x128, 4 colour grayscale)
+# Theme Name: sprocketAR1S
+# By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
+# Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 1.0
-# Last updated: 2013-03-30
-# For a README and more information, please see the project page on GitHub:
-# <https://github.com/gogi-goji/sprocket-rockbox-theme> 
-#
-# sprocketAR1S improvements from SprocketModern (author: OlsroFR) by oxGorou
+# Version: 5.3
+# Last updated: 2026-03-10
+# Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
+# Based on a modified version of sprocket, sprocketModern by OlsroFR
 
+# --- INITIALIZATION ---
 %wd
+
 %Fl(2,10-Nimbus.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
-%xl(A,repeat-strip.bmp,6,2,4)
-%xl(B,shuffle.bmp,6,2)
-%xl(C,crossfade.bmp,0,0)
-%xl(D,prog-bar-full.bmp,0,0)
-%xl(E,prog-bar-empty.bmp,0,0)
-%xl(T,timer.bmp,0,0)
+
 %xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
 %xl(c,play-status.bmp,0,0,7)
@@ -25,49 +20,48 @@
 %xl(e,batt-strip.bmp,0,0,17)
 %xl(f,batt-charge-strip.bmp,0,0,8)
 %xl(g,separator.bmp,0,0)
+%xl(h,repeat-strip.bmp,6,2,4)
+%xl(i,shuffle.bmp,6,2)
+%xl(j,crossfade.bmp,0,0)
+%xl(k,prog-bar-full.bmp,0,0)
+%xl(l,prog-bar-empty.bmp,0,0)
+%xl(m,timer.bmp,0,0)
 
-%V(2,18,110,14,2)
-%al%s%pp %Sx(of) %pe
+# --- LOGIC & CONDITIONAL TOGGLES ---
+%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
+%?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
+%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
+%?mh<%Vd(hold)>%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+%?lh<%Vd(hddwps)|>
+%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 
-%Vl(rrepeat,141,18,17,9,-)%Vf(0)%Vb(3)
-%?mm<|%xd(Aa)|%xd(Ab)|%xd(Ac)|%xd(Ad)>
-%Vl(rshuffle,141,18,17,9,-)%Vf(0)%Vb(3)
-%xd(B)
-%Vl(rcf,151,18,7,9,-)%Vf(0)%Vb(3)
-%xd(C)
-%Vl(mshuffle,128,18,17,9,-)%Vf(0)%Vb(3)
-%xd(B)
-%Vl(mcf,138,18,7,9,-)%Vf(0)%Vb(3)
-%xd(C)
-%Vl(lcf,125,18,7,9,-)%Vf(0)%Vb(3)
-%xd(C)
-%Vl(tmr_rcf_left,143,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
-%Vl(tmr_mcf_left,130,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
-%Vl(tmr_lcf_left,117,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
-%Vl(timerCF_l,126,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
-%Vl(timerCF_m,139,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
-%Vl(timerCF_r,152,18,6,9,-)%Vf(0)%Vb(3)
-%xd(T)
+# --- GLOBAL UI ELEMENTS ---
+# Separator
+%V(0,14,160,1,-)%Vf(0)%Vb(3)
+%xd(g)
 
+# --- TOP BAR VIEWPORTS ---
+# Volume Display
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
 %?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
 %Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
 %al%pv dB
 
+# Hold Icon
 %Vl(hold,58,2,8,10,-)%Vf(0)%Vb(3)
 %xd(b)
+
+# Play Status
 %Vl(PMS,75,3,10,10,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+
+# HDD Activity
 %Vl(hddwps,95,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
+
+# Battery Stats & Icons
 %Vl(BPT,111,2,24,10,2)%Vf(0)%Vb(3)
 %ar%?if(%bl, =, 100)< F |%bl%%>
-
 %Vl(charging,135,2,25,10,-)%Vf(0)%Vb(3)
 %t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
 %Vl(charged,135,2,25,10,-)%Vf(0)%Vb(3)
@@ -75,42 +69,72 @@
 %Vl(discharging,135,2,25,10,-)%Vf(0)%Vb(3)
 %?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
 
+# --- PLAYLIST & TRACK INFO VIEWPORTS ---
+# Track Number
+%V(2,18,110,14,2)
+%al%s%pp %Sx(of) %pe
+
+# Album Art
 %Vl(CA,2,31,70,70,3)
 %Cl(0,0,70,70,l,t)
 %Cd
 
+# Text (With Album Art)
 %Vl(TICA,75,31,83,72,3)%Vf(0)%Vb(3)
 %al%s%?it<%it|%fn>
-%al%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
-%al%s%?id<%id|%?d(1)<%t(8)Unknown Album;%t(8)%d(1)|Unknown Album>>
-%al%s%?iy<%iy|Unknown Year>
-%al%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
+%al%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
+%al%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
+%al%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
+%al%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(10)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
+# Text (Without Album Art)
 %Vl(TI,0,31,160,72,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
-%ac%s%?ia<%ia|%?d(2)<%t(8)Unknown Artist;%t(8)%d(2)|Unknown Artist>>
-%ac%s%?id<%id|%?d(1)<%t(8)Unknown Album;%t(8)%d(1)|Unknown Album>>
-%ac%s%?iy<%iy|Unknown Year>
-%ac%s%?Fn<%?It<%t(8)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|Unknown Artist>|Next: %Fn>|End of Playlist>
+%ac%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
+%ac%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
+%ac%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
+%ac%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(10)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
-%V(0,14,160,1,-)%Vf(0)%Vb(3)
-%xd(g)
+# --- PLAYBACK ICONS VIEWPORTS ---
+%Vl(rrepeat,141,18,17,9,-)%Vf(0)%Vb(3)
+%?mm<|%xd(ha)|%xd(hb)|%xd(hc)|%xd(hd)>
+%Vl(rshuffle,141,18,17,9,-)%Vf(0)%Vb(3)
+%xd(i)
+%Vl(rcf,151,18,7,9,-)%Vf(0)%Vb(3)
+%xd(j)
+%Vl(mshuffle,128,18,17,9,-)%Vf(0)%Vb(3)
+%xd(i)
+%Vl(mcf,138,18,7,9,-)%Vf(0)%Vb(3)
+%xd(j)
+%Vl(lcf,125,18,7,9,-)%Vf(0)%Vb(3)
+%xd(j)
 
-%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
-%?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
+%Vl(tmr_rcf_left,143,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
+%Vl(tmr_mcf_left,130,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
+%Vl(tmr_lcf_left,117,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
+%Vl(timerCF_l,126,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
+%Vl(timerCF_m,139,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
+%Vl(timerCF_r,152,18,6,9,-)%Vf(0)%Vb(3)
+%xd(m)
 
-%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
-
+# --- BOTTOM BAR VIEWPORTS ---
+# Progress Bar
 %V(3,105,154,8,-)%Vf(0)%Vb(3)
-%pb(0,0,154,8,image,D,backdrop,E)
+%pb(0,0,154,8,image,k,backdrop,l)
 
+# Time Elapsed
 %V(3,116,45,12,2)%Vf(0)%Vb(3)
 %al%s%pc
-%V(112,116,45,12,2)%Vf(0)%Vb(3)
-%ar%s-%pr
-%?mh<%Vd(hold)>%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
-%?lh<%Vd(hddwps)|>
-%?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 
+# Clock
 %V(48,116,64,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%cH:%cM>
+
+# Time Remaining
+%V(112,116,45,12,2)%Vf(0)%Vb(3)
+%ar%s-%pr
