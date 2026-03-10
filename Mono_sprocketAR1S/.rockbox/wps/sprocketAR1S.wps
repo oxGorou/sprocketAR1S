@@ -133,7 +133,7 @@
 
 # Clock
 %V(48,116,64,12,2)%Vf(0)%Vb(3)
-%?bs<%ac%s%bs|%ac%s%cH:%cM>
+%?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
 # Time Remaining
 %V(112,116,45,12,2)%Vf(0)%Vb(3)

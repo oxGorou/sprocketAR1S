@@ -94,7 +94,7 @@
 
 # Clock
 %Vl(CLOCK,0,96,138,12,2)%Vf(0)%Vb(3)
-%?bs<%ac%s%bs|%ac%s%cH:%cM>
+%?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
 # --- SPECIFIC SCREEN VIEWPORTS ---
 # Lockscreen With Album Art (LKA)
