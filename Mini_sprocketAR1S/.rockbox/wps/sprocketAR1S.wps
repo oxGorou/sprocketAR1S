@@ -2,8 +2,8 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod Mini (138x110, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 5.3
-# Last updated: 2026-03-10
+# Version: 6.0
+# Last updated: 2026-03-13
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -31,8 +31,9 @@
 %?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
 %?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
 %?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
-%?mh<%Vd(hold)>%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
-%?lh<%Vd(hddwps)|>
+%?mh<%Vd(hold)>
+%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+%?lh<%Vd(hddwps)>
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
 
 # --- GLOBAL UI ELEMENTS ---
@@ -80,7 +81,7 @@
 %Cd
 
 # Text (With Album Art)
-%Vl(TICA,60,28,78,56,3)%Vf(0)%Vb(3)
+%Vl(TICA,59,28,79,56,3)%Vf(0)%Vb(3)
 %al%s%?it<%it|%fn>
 %al%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
 %al%s%?id<%?iy<%t(10)%id;%t(10)%iy|%id>|%?d(1)<%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1);%t(10)%iy|%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)>|%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%iy|%Sx(Unknown) %Sx(Album)>>>
@@ -126,13 +127,13 @@
 %pb(0,0,132,8,image,k,backdrop,l)
 
 # Time Elapsed
-%V(3,98,45,12,2)%Vf(0)%Vb(3)
+%V(3,98,42,12,2)%Vf(0)%Vb(3)
 %al%s%pc
 
 # Clock
-%V(48,98,42,12,2)%Vf(0)%Vb(3)
+%V(45,98,48,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
 # Time Remaining
-%V(90,98,45,12,2)%Vf(0)%Vb(3)
+%V(93,98,42,12,2)%Vf(0)%Vb(3)
 %ar%s-%pr
