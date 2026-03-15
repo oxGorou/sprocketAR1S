@@ -3,7 +3,7 @@
 # Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
 # Version: 6.0
-# Last updated: 2026-03-13
+# Last updated: 2026-03-15
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -13,8 +13,7 @@
 
 %Fl(2,10-Nimbus.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
-%Fl(4,35-Nimbus.fnt)
-%Fl(5,19-Nimbus.fnt)
+%Fl(4,19-Nimbus.fnt)
 
 %xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
@@ -40,7 +39,7 @@
 %?if(%cs, =, 1)<%?mh<|%Vd(STU)>>
 
 # Bottom Bar Toggles
-%?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
+%?if(%cs, =, 1)<%?mh<%?if(%mp, !=, 1)<%Vd(NPI)%Vd(NPT)|%Vd(GREETING)>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>|%?if(%mp, =, 1)<%Vd(CLOCK)|%Vd(NPI)%Vd(NPT)>>
 
 # --- GLOBAL UI ELEMENTS ---
 %V(0,14,160,1,-)%Vf(0)%Vb(3)
@@ -97,25 +96,29 @@
 %Vl(CLOCK,0,114,160,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
+# Greeting
+%Vl(GREETING,0,114,160,12,2)%Vf(0)%Vb(3)
+%ac%s%?and(%if(%ck, <=,11),%if(%ck, >,4))<Morning|%?and(%if(%ck, <=,16),%if(%ck, >,11))<Afternoon|%?and(%if(%ck, <=,21),%if(%ck, >,16))<Evening|%?or(%if(%ck, <=,4),%if(%ck, >,20))<Night>>>>
+
 # --- SPECIFIC SCREEN VIEWPORTS ---
 # Lockscreen With Album Art (LKA)
 %Vl(LKA,2,18,88,88,-)%Vf(0)%Vb(3)
 %Cl(0,0,88,88,c,c)
 %Cd
-%Vl(LKA,92,40,66,20,5)%Vf(0)%Vb(3)
+%Vl(LKA,92,40,66,20,4)%Vf(0)%Vb(3)
 %ac%s%?cf<%cH:%cM|%cl:%cM %ss(0,1,%cP)>
 %Vl(LKA,92,60,66,20,2)%Vf(0)%Vb(3)
-%ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
-%ac%s%cb %ce, %cy
+%ac%s%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca>
+%ac%s%?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cY %cb %ce|%?if(%St(lang), =, english-us)<%cb %ce %cY|%ce %cb %cY>>
 %Vl(LKA,92,85,66,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs>
 
 # Lockscreen No Album Art (LKN)
-%Vl(LKN,0,25,160,35,4)%Vf(0)%Vb(3)
+%Vl(LKN,0,40,160,35,4)%Vf(0)%Vb(3)
 %ac%s%?cf<%cH:%cM|%cl:%cM %cP>
 %Vl(LKN,0,60,160,20,2)%Vf(0)%Vb(3)
-%ac%s%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>
-%ac%s%?cm<January|February|March|April|May|June|July|August|September|October|November|December> %ce %cY
+%ac%s%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca>
+%ac%s%?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cY %cb %ce|%?if(%St(lang), =, english-us)<%cb %ce %cY|%ce %cb %cY>>
 %Vl(LKN,0,85,160,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs>
 
@@ -136,4 +139,4 @@
 %Vl(ThemeInfo,0,95,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
 %Vl(ThemeInfo,0,97,160,10,2)%Vf(0)%Vb(3)
-%acsprocketAR1S v6
+%acsprocketAR1S v6 Plus

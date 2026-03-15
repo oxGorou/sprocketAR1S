@@ -11,7 +11,13 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 
 # Reddit
 [Introduction Post](https://www.reddit.com/r/ipod/comments/1qzg3gm/introducing_sprocketar1s_theme_for_ipod_mini_ipod/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-  
+
+# Settings
+> [!WARNING]
+> - Switch "Disable main menu scrolling" to "off" if you want to enable scrolling text on the main menu.
+> - `sprocketAR1S.cfg` or Settings->General Settings->Display->Scrolling->Disable main menu scrolling.
+> - WARNING: Enabling this may break/brick the lockscreen if anything other than the Now Playing bar is scrolling.
+
 # Preview
 ## iPod Mini
 ![Alt text](Preview/Mini_WPSCA.png?raw=true "MiniWPSCA")
