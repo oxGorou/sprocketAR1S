@@ -2,8 +2,8 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 6.0
-# Last updated: 2026-03-15
+# Version: 7.0
+# Last updated: 2026-03-20
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -35,6 +35,7 @@
 %Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
 %?lh<%Vd(hddwps)>
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
+%?mv(2)<%Vd(volume)|%Vd(trackpos)>
 
 # --- GLOBAL UI ELEMENTS ---
 # Separator
@@ -44,7 +45,7 @@
 # --- TOP BAR VIEWPORTS ---
 # Volume Display
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
-%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
 %Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
 %al%pv dB
 
@@ -86,7 +87,7 @@
 %al%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
 %al%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
 %al%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
-%al%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(10)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
+%al%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
 # Text (Without Album Art)
 %Vl(TI,0,31,160,72,3)%Vf(0)%Vb(3)
@@ -94,7 +95,7 @@
 %ac%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
 %ac%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
 %ac%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
-%ac%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(10)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
+%ac%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
 # --- PLAYBACK ICONS VIEWPORTS ---
 %Vl(rrepeat,141,18,17,9,-)%Vf(0)%Vb(3)
@@ -124,18 +125,26 @@
 %xd(m)
 
 # --- BOTTOM BAR VIEWPORTS ---
-# Progress Bar
-%V(3,105,154,8,-)%Vf(0)%Vb(3)
+# Track Progress Bar
+%Vl(trackpos,3,105,154,8,-)%Vf(0)%Vb(3)
 %pb(0,0,154,8,image,k,backdrop,l)
 
 # Time Elapsed
-%V(3,116,48,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,3,116,48,12,2)%Vf(0)%Vb(3)
 %al%s%pc
 
 # Clock
-%V(51,116,58,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,51,116,58,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
 # Time Remaining
-%V(109,116,48,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,109,116,48,12,2)%Vf(0)%Vb(3)
 %ar%s-%pr
+
+# Volume Bar
+%Vl(volume,3,105,154,8,-)%Vf(0)%Vb(3)
+%pv(0,0,154,8,image,k,backdrop,l)
+
+# Track Audio Info
+%Vl(volume,3,116,154,12,2)%Vf(0)%Vb(3)
+%ac%s%fc %fb kbps %fk kHz

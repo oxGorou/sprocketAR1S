@@ -2,8 +2,8 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 6.0
-# Last updated: 2026-03-15
+# Version: 7.0
+# Last updated: 2026-03-20
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -61,7 +61,7 @@
 
 # Volume Display
 %Vl(VI,2,1,9,12,-)%Vf(0)%Vb(3)
-%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>s
+%?pv<%xd(aa)|%xd(aa)|%xd(aa)|%xd(ab)|%xd(ac)|%xd(ad)|%xd(ae)|%xd(af)|%xd(af)|%xd(ag)>
 %Vl(VT,13,2,38,10,2)%Vf(0)%Vb(3)
 %al%pv dB
 
@@ -139,4 +139,4 @@
 %Vl(ThemeInfo,0,95,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
 %Vl(ThemeInfo,0,97,160,10,2)%Vf(0)%Vb(3)
-%acsprocketAR1S v6 Plus
+%acsprocketAR1S v7
