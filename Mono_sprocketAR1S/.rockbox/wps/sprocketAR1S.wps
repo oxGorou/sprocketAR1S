@@ -159,7 +159,7 @@
 
 # Track Audio Info
 %Vl(volume,3,116,154,12,2)%Vf(0)%Vb(3)
-%ac%s%fc %fb kbps
+%ac%s%fc %fbK %fk kHz
 
 # --- LOCKSCREEN VIEWPORTS ---
 # Lockscreen Bottom Bar
@@ -174,5 +174,3 @@
 %Vl(LKN,0,60,160,20,2)%Vf(0)%Vb(3)
 %ac%s%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca>
 %ac%s%?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cY %cb %ce|%?if(%St(lang), =, english-us)<%cb %ce %cY|%ce %cb %cY>>
-%Vl(LKN,0,85,160,12,2)%Vf(0)%Vb(3)
-%?bs<%ac%s%bs>
