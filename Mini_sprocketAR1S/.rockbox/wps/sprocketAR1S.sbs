@@ -2,7 +2,7 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod Mini (138x110, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 6.0
+# Version: 7.0
 # Last updated: 2026-03-25
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
@@ -139,4 +139,4 @@
 %Vl(ThemeInfo,0,77,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
 %Vl(ThemeInfo,0,79,138,10,2)%Vf(0)%Vb(3)
-%acsprocketAR1S v6 Pro
+%acsprocketAR1S v7 Pro

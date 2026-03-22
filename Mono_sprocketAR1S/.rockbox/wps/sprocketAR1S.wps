@@ -2,7 +2,7 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 6.0
+# Version: 7.0
 # Last updated: 2026-03-25
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
@@ -12,6 +12,7 @@
 
 %Fl(2,10-Nimbus.fnt)
 %Fl(3,14-Rockbox-Mix.fnt)
+%Fl(4,19-Nimbus.fnt)
 
 %xl(a,vol-bar-strip.bmp,0,0,7)
 %xl(b,hold.bmp,0,0)
@@ -28,18 +29,29 @@
 %xl(m,timer.bmp,0,0)
 
 # --- LOGIC & CONDITIONAL TOGGLES ---
-%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>
-%?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>
-%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>
-%?mh<%Vd(hold)>
-%Vd(VI)%Vd(VT)%Vd(PMS)%Vd(BPT)
+# Global Status Bar
+%Vd(VI)%Vd(VT)%Vd(BPT)
 %?lh<%Vd(hddwps)>
 %?bp<%?bc<%Vd(charging)|%Vd(charged)>|%Vd(discharging)>
-%?mv(2)<%Vd(volume)|%Vd(trackpos)>
+
+# Play Status / Hold Icon
+%?mh<%Vd(hold)|%Vd(PMS)>
+
+# Hold ON
+%?mh<%Vd(lock_sep)%Vd(NPI)%Vd(NPT)%Vd(LKN)>
+
+# Hold OFF
+%?mh<|%Vd(POS)%?C<%Vd(CA)%Vd(TICA)|%Vd(TI)>%?mv(2)<%Vd(volume)|%Vd(trackpos)>>
+%?mh<|%?mm<%?ps<%Vd(rshuffle)%?xf<|%Vd(mcf)>|%?xf<|%Vd(rcf)>>|%Vd(rrepeat)%?ps<%Vd(mshuffle)%?xf<|%Vd(lcf)>|%?xf<|%Vd(mcf)>>>>
+%?mh<|%?bs<%?xf<%?mm<%?ps<%Vd(timerCF_m)|%Vd(timerCF_r)>|%?ps<%Vd(timerCF_l)|%Vd(timerCF_m)>>|%?mm<%?ps<%Vd(tmr_mcf_left)|%Vd(tmr_rcf_left)>|%?ps<%Vd(tmr_lcf_left)|%Vd(tmr_mcf_left)>>>>>
 
 # --- GLOBAL UI ELEMENTS ---
-# Separator
+# Separator (Top)
 %V(0,14,160,1,-)%Vf(0)%Vb(3)
+%xd(g)
+
+# Separator (Bottom)
+%Vl(lock_sep,0,109,160,1,-)%Vf(0)%Vb(3)
 %xd(g)
 
 # --- TOP BAR VIEWPORTS ---
@@ -50,7 +62,7 @@
 %al%pv dB
 
 # Hold Icon
-%Vl(hold,58,2,8,10,-)%Vf(0)%Vb(3)
+%Vl(hold,75,2,8,10,-)%Vf(0)%Vb(3)
 %xd(b)
 
 # Play Status
@@ -73,7 +85,7 @@
 
 # --- PLAYLIST & TRACK INFO VIEWPORTS ---
 # Track Number
-%V(2,18,110,14,2)
+%Vl(POS,2,18,110,14,2)
 %al%s%pp %Sx(of) %pe
 
 # Album Art
@@ -148,3 +160,19 @@
 # Track Audio Info
 %Vl(volume,3,116,154,12,2)%Vf(0)%Vb(3)
 %ac%s%fc %fb kbps
+
+# --- LOCKSCREEN VIEWPORTS ---
+# Lockscreen Bottom Bar
+%Vl(NPT,14,112,146,14,3)%Vf(0)%Vb(3)
+%al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%ss(0,4, %iy)%)|>
+%Vl(NPI,1,114,12,12,-)%Vf(0)%Vb(3)
+%?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
+
+# Lockscreen No Album Art (LKN)
+%Vl(LKN,0,40,160,35,4)%Vf(0)%Vb(3)
+%ac%s%?cf<%cH:%cM|%cl:%cM %cP>
+%Vl(LKN,0,60,160,20,2)%Vf(0)%Vb(3)
+%ac%s%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca>
+%ac%s%?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cY %cb %ce|%?if(%St(lang), =, english-us)<%cb %ce %cY|%ce %cb %cY>>
+%Vl(LKN,0,85,160,12,2)%Vf(0)%Vb(3)
+%?bs<%ac%s%bs>
