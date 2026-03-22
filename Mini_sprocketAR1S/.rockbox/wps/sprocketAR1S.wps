@@ -2,8 +2,8 @@
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
 # Platform: iPod Mini (138x110, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 7.0
-# Last updated: 2026-03-20
+# Version: 6.0
+# Last updated: 2026-03-25
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -145,4 +145,4 @@
 
 # Track Audio Info
 %Vl(volume,3,98,132,12,2)%Vf(0)%Vb(3)
-%ac%s%fc %fb kbps %fk kHz
+%ac%s%fc %fb kbps
