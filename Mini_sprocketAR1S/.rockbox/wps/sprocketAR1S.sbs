@@ -34,7 +34,7 @@
 # Screen State Toggles (Lockscreen, Playback, USB, Info)
 %?if(%cs, =, 10)<%Vd(VI)%Vd(VT)>
 %?if(%cs, =, 21)<%VI(u)%Vd(USB)|%?if(%cs, =, 16)<%VI(y)%Vd(ThemeInfo)|%VI(x)>>
-%?if(%cs, =, 1)<%?mh<%?pS(0.2)<%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>>>>
+%?if(%cs, =, 1)<%?mh<%?pS(0.2)<%?mp<|%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>||||>>>>
 %?if(%cs, =, 1)<%?and(%if(%mh, =, 1), %if(%lh, =, 0))<%Vd(rr)%?C<%Vd(LKA)|%Vd(LKN)>>>
 %?if(%cs, =, 1)<%?mh<|%Vd(STU)>>
 
