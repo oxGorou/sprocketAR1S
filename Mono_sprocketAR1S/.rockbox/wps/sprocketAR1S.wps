@@ -90,7 +90,7 @@
 
 # Album Art
 %Vl(CA,2,30,72,72,3)
-%Cl(0,0,72,72,l,t)
+%Cl(0,0,72,72,c,c)
 %Cd
 
 # Text (With Album Art)
