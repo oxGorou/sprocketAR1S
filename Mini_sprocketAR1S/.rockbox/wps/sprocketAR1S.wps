@@ -70,7 +70,7 @@
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 
 # HDD Activity
-%Vl(hddwps,79,4,9,7,-)%Vf(0)%Vb(3)
+%Vl(hddwps,78,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
 
 # Battery Stats & Icons
