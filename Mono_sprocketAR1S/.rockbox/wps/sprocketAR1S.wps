@@ -164,7 +164,7 @@
 # --- LOCKSCREEN VIEWPORTS ---
 # Lockscreen Bottom Bar
 %Vl(NPT,14,112,146,14,3)%Vf(0)%Vb(3)
-%al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%ss(0,4, %iy)%)|>
+%al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%iy%)|>
 %Vl(NPI,1,114,12,12,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 
