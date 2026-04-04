@@ -1,9 +1,9 @@
 # Theme Name: sprocketAR1S
 # By: Le Khanh Binh <lekhanhbinh2901@gmail.com> 
-# Platform: iPod 1G 2G 3G 4G (160x128, 4 colour grayscale)
+# Platform: iPod Mini (138x110, 4 colour grayscale)
 # License: CC-BY-SA 3.0
-# Version: 7.0
-# Last updated: 2026-03-25
+# Version: 8.0
+# Last updated: 2026-04-04
 # Original Theme: sprocket by Cam Mendoza (https://github.com/gogi-goji/sprocket-rockbox-theme)
 # Based on a modified version of sprocket, sprocketModern by OlsroFR
 
@@ -47,11 +47,11 @@
 
 # --- GLOBAL UI ELEMENTS ---
 # Separator (Top)
-%V(0,14,160,1,-)%Vf(0)%Vb(3)
+%V(0,14,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
 
 # Separator (Bottom)
-%Vl(lock_sep,0,109,160,1,-)%Vf(0)%Vb(3)
+%Vl(lock_sep,0,91,138,1,-)%Vf(0)%Vb(3)
 %xd(g)
 
 # --- TOP BAR VIEWPORTS ---
@@ -62,117 +62,115 @@
 %al%pv dB
 
 # Hold Icon
-%Vl(hold,75,2,8,10,-)%Vf(0)%Vb(3)
+%Vl(hold,64,2,8,10,-)%Vf(0)%Vb(3)
 %xd(b)
 
 # Play Status
-%Vl(PMS,75,3,10,10,-)%Vf(0)%Vb(3)
+%Vl(PMS,64,3,10,10,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 
 # HDD Activity
-%Vl(hddwps,94,4,9,7,-)%Vf(0)%Vb(3)
+%Vl(hddwps,78,4,9,7,-)%Vf(0)%Vb(3)
 %xd(d)
 
 # Battery Stats & Icons
-%Vl(BPT,111,2,24,10,2)%Vf(0)%Vb(3)
+%Vl(BPT,89,2,24,10,2)%Vf(0)%Vb(3)
 %ar%?if(%bl, =, 100)< F |%bl%%>
-%Vl(charging,135,2,25,10,-)%Vf(0)%Vb(3)
+%Vl(charging,113,2,25,10,-)%Vf(0)%Vb(3)
 %t(0.5)%xd(fa);%t(0.5)%xd(fb);%t(0.5)%xd(fc);%t(0.5)%xd(fd);%t(0.5)%xd(fe);%t(0.5)%xd(ff);%t(0.5)%xd(fg);%t(0.5)%xd(fh)
-%Vl(charged,135,2,25,10,-)%Vf(0)%Vb(3)
+%Vl(charged,113,2,25,10,-)%Vf(0)%Vb(3)
 %xd(fh)
-%Vl(discharging,135,2,25,10,-)%Vf(0)%Vb(3)
+%Vl(discharging,113,2,25,10,-)%Vf(0)%Vb(3)
 %?bl<%xd(ea)|%xd(eb)|%xd(ec)|%xd(ed)|%xd(ee)|%xd(ef)|%xd(eg)|%xd(eh)|%xd(ei)|%xd(ej)|%xd(ek)|%xd(el)|%xd(em)|%xd(en)|%xd(eo)|%xd(ep)|%xd(eq)|%xd(eq)>
 
 # --- PLAYLIST & TRACK INFO VIEWPORTS ---
 # Track Number
-%Vl(POS,2,18,110,14,2)
+%Vl(POS,2,17,90,14,2)
 %al%s%pp %Sx(of) %pe
 
 # Album Art
-%Vl(CA,2,30,72,72,3)
-%Cl(0,0,72,72,c,c)
+%Vl(CA,2,29,55,55,3)
+%Cl(0,0,55,55,c,c)
 %Cd
 
 # Text (With Album Art)
-%Vl(TICA,76,31,84,72,3)%Vf(0)%Vb(3)
+%Vl(TICA,59,28,79,56,3)%Vf(0)%Vb(3)
 %al%s%?it<%it|%fn>
 %al%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
-%al%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
-%al%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
+%al%s%?id<%?iy<%t(10)%id;%t(10)%iy|%id>|%?d(1)<%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1);%t(10)%iy|%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)>|%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%iy|%Sx(Unknown) %Sx(Album)>>>
 %al%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
 # Text (Without Album Art)
-%Vl(TI,0,31,160,72,3)%Vf(0)%Vb(3)
+%Vl(TI,0,28,138,56,3)%Vf(0)%Vb(3)
 %ac%s%?it<%it|%fn>
 %ac%s%?ia<%ia|%?d(2)<%t(10)%Sx(Unknown) %Sx(Artist);%t(10)%d(2)|%Sx(Unknown) %Sx(Artist)>>
-%ac%s%?id<%id|%?d(1)<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)|%Sx(Unknown) %Sx(Album)>>
-%ac%s%?iy<%iy|%Sx(Unknown) %Sx(Year)>
+%ac%s%?id<%?iy<%t(10)%id;%t(10)%iy|%id>|%?d(1)<%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1);%t(10)%iy|%t(10)%Sx(Unknown) %Sx(Album);%t(10)%d(1)>|%?iy<%t(10)%Sx(Unknown) %Sx(Album);%t(10)%iy|%Sx(Unknown) %Sx(Album)>>>
 %ac%s%?Fn<%?It<%t(10)Next: %It;%t(2)Next: by;%t(8)Next: %?Ia<%Ia|%Sx(Unknown) %Sx(Artist)>|Next: %Fn>|End %Sx(of) Playlist>
 
 # --- PLAYBACK ICONS VIEWPORTS ---
-%Vl(rrepeat,141,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(rrepeat,119,17,17,9,-)%Vf(0)%Vb(3)
 %?mm<|%xd(ha)|%xd(hb)|%xd(hc)|%xd(hd)>
-%Vl(rshuffle,141,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(rshuffle,119,17,17,9,-)%Vf(0)%Vb(3)
 %xd(i)
-%Vl(rcf,151,18,7,9,-)%Vf(0)%Vb(3)
+%Vl(rcf,129,17,7,9,-)%Vf(0)%Vb(3)
 %xd(j)
-%Vl(mshuffle,128,18,17,9,-)%Vf(0)%Vb(3)
+%Vl(mshuffle,106,17,17,9,-)%Vf(0)%Vb(3)
 %xd(i)
-%Vl(mcf,138,18,7,9,-)%Vf(0)%Vb(3)
+%Vl(mcf,116,17,7,9,-)%Vf(0)%Vb(3)
 %xd(j)
-%Vl(lcf,125,18,7,9,-)%Vf(0)%Vb(3)
+%Vl(lcf,103,17,7,9,-)%Vf(0)%Vb(3)
 %xd(j)
 
-%Vl(tmr_rcf_left,143,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_rcf_left,121,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
-%Vl(tmr_mcf_left,130,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_mcf_left,108,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
-%Vl(tmr_lcf_left,117,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(tmr_lcf_left,95,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
-%Vl(timerCF_l,126,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_l,104,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
-%Vl(timerCF_m,139,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_m,117,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
-%Vl(timerCF_r,152,18,6,9,-)%Vf(0)%Vb(3)
+%Vl(timerCF_r,130,17,6,9,-)%Vf(0)%Vb(3)
 %xd(m)
 
 # --- BOTTOM BAR VIEWPORTS ---
 # Track Progress Bar
-%Vl(trackpos,3,105,154,8,-)%Vf(0)%Vb(3)
-%pb(0,0,154,8,image,k,backdrop,l)
+%Vl(trackpos,4,87,130,8,-)%Vf(0)%Vb(3)
+%pb(0,0,130,8,image,k,backdrop,l)
 
 # Time Elapsed
-%Vl(trackpos,3,116,48,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,4,98,40,12,2)%Vf(0)%Vb(3)
 %al%s%pc
 
 # Clock
-%Vl(trackpos,51,116,58,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,44,98,50,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|%ac%s%?cf<%cH:%cM|%cl:%cM %cP>>
 
 # Time Remaining
-%Vl(trackpos,109,116,48,12,2)%Vf(0)%Vb(3)
+%Vl(trackpos,94,98,40,12,2)%Vf(0)%Vb(3)
 %ar%s-%pr
 
 # Volume Bar
-%Vl(volume,3,105,154,8,-)%Vf(0)%Vb(3)
-%pv(0,0,154,8,image,k,backdrop,l)
+%Vl(volume,4,87,130,8,-)%Vf(0)%Vb(3)
+%pv(0,0,130,8,image,k,backdrop,l)
 
 # Track Audio Info
-%Vl(volume,3,116,154,12,2)%Vf(0)%Vb(3)
+%Vl(volume,2,98,134,12,2)%Vf(0)%Vb(3)
 %ac%s%fc %fbK %fk kHz
 
 # --- LOCKSCREEN VIEWPORTS ---
 # Lockscreen Bottom Bar
-%Vl(NPT,14,112,146,14,3)%Vf(0)%Vb(3)
+%Vl(NPT,15,94,123,14,3)%Vf(0)%Vb(3)
 %al%s%?it<%it|%?fn<%fn|>>%?ia< - %ia|>%?id< - %id|>%?iy< %(%iy%)|>
-%Vl(NPI,1,114,12,12,-)%Vf(0)%Vb(3)
+%Vl(NPI,2,96,12,12,-)%Vf(0)%Vb(3)
 %?mp<%xd(ca)|%xd(cb)|%xd(cc)|%xd(cd)|%xd(ce)|%xd(cf)|%xd(cg)>
 
 # Lockscreen No Album Art (LKN)
-%Vl(LKN,0,40,160,35,4)%Vf(0)%Vb(3)
+%Vl(LKN,0,30,138,30,4)%Vf(0)%Vb(3)
 %ac%s%?cf<%cH:%cM|%cl:%cM %cP>
-%Vl(LKN,0,60,160,20,2)%Vf(0)%Vb(3)
+%Vl(LKN,0,50,138,30,2)%Vf(0)%Vb(3)
 %ac%s%?if(%ss(0,7,%St(lang)), =, english)<%?cu<Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday>|%ca>
 %ac%s%?or(%if(%ss(0,7,%St(lang)), =, chinese),%if(%St(lang), =, magyar),%if(%St(lang), =, lietuviu),%if(%St(lang), =, japanese),%if(%St(lang), =, korean))<%cY %cb %ce|%?if(%St(lang), =, english-us)<%cb %ce %cY|%ce %cb %cY>>
-%Vl(LKN,0,85,160,12,2)%Vf(0)%Vb(3)
+%Vl(LKN,0,75,138,12,2)%Vf(0)%Vb(3)
 %?bs<%ac%s%bs|>

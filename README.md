@@ -1,13 +1,16 @@
 # sprocketAR1S
 
 # Introduction
-sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/Olsro/)’s [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) theme, featuring a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. Powered by the Rockbox-Mix font for full multi-language support
+sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/Olsro/)’s [sprocketModern](https://themes.rockbox.org/index.php?themeid=3549&target=ipodmini2g) theme. It features a refined WPS with dedicated sleep-timer iconography, a fresh new lockscreen, and a dynamic bar at the bottom of the Main Menu that intelligently toggles between track metadata and system time. It is powered by the Rockbox-Mix font for full multi-language support.
 
-*Inspired by the StockOS interface of Monochrome iPods, yet enhanced with modern design elements like a lock screen, playback mode icons, and a Now Playing bar on the home screen,* ***sprocketAR1S*** *blends these features to deliver a nostalgic yet modern experience for Monochrome iPods.*
+*Inspired by the StockOS interface of monochrome iPods, yet enhanced with modern design elements like a lock screen, playback mode icons, and a Now Playing bar on the home screen,* ***sprocketAR1S*** *blends these features to deliver a nostalgic yet modern experience for monochrome iPods.*
 
 - sprocketAR1S comes in two device versions:
   - [iPod Mini](https://themes.rockbox.org/index.php?themeid=3954)
   - [iPod Monochrome (Gen 1-4)](https://themes.rockbox.org/index.php?themeid=3955)
+
+# sprocket1Pod
+sprocketAR1S has a minimalist version of itself called [sprocket1Pod](https://github.com/oxGorou/sprocket1Pod).
 
 # Reddit
 [Introduction Post](https://www.reddit.com/r/ipod/comments/1qzg3gm/introducing_sprocketar1s_theme_for_ipod_mini_ipod/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
@@ -15,10 +18,11 @@ sprocketAR1S is a heavily modified evolution of [Paul Sauro](https://github.com/
 # Settings
 > [!WARNING]
 > - Switch "Disable main menu scrolling" to "off" if you want to enable scrolling text on the main menu.
-> - `sprocketAR1S.cfg` or Settings->General Settings->Display->Scrolling->Disable main menu scrolling.
-> - WARNING: Enabling this may break/brick the lockscreen if anything other than the Now Playing bar is scrolling.
+> - This can be found in `sprocketAR1S.cfg` or by navigating to Settings -> General Settings -> Display -> Scrolling -> Disable main menu scrolling.
+> - WARNING: Enabling this may break or brick the lockscreen if anything other than the Now Playing bar is scrolling.
 
 # Preview
+
 ## iPod Mini
 ![Alt text](Preview/Mini_WPSCA.png?raw=true "MiniWPSCA")
 ![Alt text](Preview/Mini_WPS.png?raw=true "MiniWPS")
